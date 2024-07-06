@@ -1,0 +1,97 @@
+\documentclass[14pt, t, lualatex]{beamer}
+\title{Decoding Superconductors: Machine Learning models to predict critical temperature ($T_{c}$)}
+\institute[]{Jawaharlal Nehru Centre for Advanced Scientific Research}
+\date{\today}
+\author{Suhas Adiga}
+\usepackage{amsmath,amssymb,mathtools}
+\usetheme[engine=lualatex, mathshape=sf, fontdir=kthpq-files/fonts/Figtree/]{kthpq}
+\setmonofont{Bitstream Vera Sans Mono}[Scale=.9]
+
+\begin{document}
+
+\inserttitlepage
+
+\section{Binary Compounds}
+%\insertsectionpage
+%-----------------------------------------------------------------------------------------------------%
+\begin{frame}{3-Descriptor Model}
+\begin{minipage}[t]{0.5\linewidth}
+\begin{itemize}
+    \item Without Hyper-parameter Optimization 
+    \begin{figure}
+        \centering
+        \includegraphics[scale=0.25]{kthpq-files/figs/Random_Forest_100.png}
+    \end{figure}
+    \begin{enumerate}
+        \item $R^{2}$ Score = 
+        \item Mean Absolute Error =
+        \item Mean Squared Error = 
+    \end{enumerate}
+\end{itemize}
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{0.5\linewidth}
+\begin{itemize}
+    \item With Hyper-Parameter Optimization (45 fold) 
+    \begin{figure}
+        \centering
+        \includegraphics[scale=0.25]{kthpq-files/figs/45_Fold_RF_100.png}
+    \end{figure}
+    \begin{enumerate}
+        \item $R^{2}$ Score = 
+        \item Mean Absolute Error =
+        \item Mean Squared Error = 
+    \end{enumerate}
+\end{itemize}
+\end{minipage}%
+\end{frame}
+
+%------------------------------------------------------------------------------------------------------%
+\begin{frame}{4-Descriptor Model}
+Along with the three descriptors used previously, we now use \textbf{`Weighted average of number of unpaired electrons'} in a compound as the $4^{th}$ descriptor. 
+\\
+
+\begin{minipage}[t]{0.5\linewidth}
+\begin{itemize}
+    \item Without Hyper-parameter Optimization 
+    \begin{figure}
+        \centering
+        \includegraphics[scale=0.025]{kthpq-files/figs/ML_Model_v1.0.1.1.a_RF(100).jpg}
+    \end{figure}
+    \begin{enumerate}
+        \item $R^{2}$ Score = 
+        \item Mean Absolute Error =
+        \item Mean Squared Error = 
+    \end{enumerate}
+\end{itemize}
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{0.5\linewidth}
+\begin{itemize}
+    \item With Hyper-Parameter Optimization (35 fold) 
+    \begin{figure}
+        \centering
+        \includegraphics[scale=0.25]{kthpq-files/figs/Random_Forest_35-100.png}
+    \end{figure}
+    \begin{enumerate}
+        \item $R^{2}$ Score = 
+        \item Mean Absolute Error =
+        \item Mean Squared Error = 
+    \end{enumerate}
+\end{itemize}
+\end{minipage}%
+\end{frame}
+
+%-----------------------------------------------------------------------------------------------------%
+\begin{frame}{Correlation Map}
+\begin{figure}
+    \centering
+    \includegraphics[scale =0.1]{kthpq-files/figs/Correlation_v1.0.1.1.a.png}
+    \caption{Correlation Heatmap for 4-Descriptor Machine Learning Model}
+\end{figure}
+\end{frame}
+
+%-----------------------------------------------------------------------------------------------------%
+
+
+\end{document}
